@@ -1,0 +1,36 @@
+.editor-wrapper {
+  display: flex;
+  background-color: #0e100f;
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+.editor-preview {
+  flex: 1;
+}
+
+.editor-controller {
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.editor-action {
+  min-height: 28px;
+  min-width: 100px;
+  padding: 5px 10px;
+  background: #0ae448;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editor-action:hover {
+  background: #abff84;
+}
