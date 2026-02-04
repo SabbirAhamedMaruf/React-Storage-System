@@ -20,11 +20,7 @@ function randomString(length = 8) {
 function App() {
   const store = getState();
   const dispatch = useDispatch();
-
-  console.log({ store, dispatch });
-
   const ref = useRef(null);
-
   useEffect(() => {
     if (ref.current) {
       Prism.highlightElement(ref.current);
@@ -43,7 +39,7 @@ function App() {
           onClick={() =>
             dispatch({
               type: "editor/handleSidebarOpen",
-              value: Math.random() < 0.5,
+              payload: Math.random() < 0.5,
             })
           }
           className="editor-action"
@@ -54,7 +50,7 @@ function App() {
           onClick={() =>
             dispatch({
               type: "editor/handleGSOpen",
-              value: Math.random() < 0.5,
+              payload: Math.random() < 0.5,
             })
           }
           className="editor-action"
@@ -65,7 +61,7 @@ function App() {
           onClick={() =>
             dispatch({
               type: "animation/handleAddAnimation",
-              value: [
+              payload: [
                 ...store.animation.allAnimation,
                 { title: randomString(10), data: Math.random() < 0.5 },
               ],
